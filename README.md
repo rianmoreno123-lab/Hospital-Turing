@@ -129,7 +129,7 @@ limiteDiariasEnfermaria = 30
 
 | Tecnologia | Versão | Finalidade | 
 | ----- | ----- | ----- | 
-| **JavaScript** | — | Interatividade, controle de sessão, permissões de tela e chamadas (`fetch`). | 
+| **JavaScript** | v24.22.1 | Interatividade, controle de sessão, permissões de tela e chamadas (`fetch`). | 
 
 ### Backend
 
