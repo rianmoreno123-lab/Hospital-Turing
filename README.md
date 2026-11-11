@@ -86,10 +86,12 @@ limiteDiariasEnfermaria = 30
 
 ### Ferramentas de Desenvolvimento
 
-| Ferramenta | Finalidade | 
-| ----- | ----- | 
-| **VS Code** | IDE principal utilizada no desenvolvimento do projeto. | 
-| **Git & GitHub** | Controle de versão do código-fonte e colaboração em equipe. | 
+| Ferramenta | Versão | Finalidade | 
+| ----- | ----- | ----- | 
+| **VS Code** | 1.146.0 | IDE principal utilizada no desenvolvimento do projeto. | 
+| **Git & GitHub** | 2.50.1 | Controle de versão do código-fonte e colaboração em equipe. | 
+| **Astah UML** | 12.0.0 | Diagramas UML. | 
+| **GitHub Projects** | Serviço web | Quadro de tarefas das sprints. | 
 
 ## 5. Organização do Projeto
 
