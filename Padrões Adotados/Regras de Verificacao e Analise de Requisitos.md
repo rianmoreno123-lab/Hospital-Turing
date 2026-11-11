@@ -95,10 +95,10 @@ A tabela abaixo será utilizada para registrar os resultados da aplicação das 
 | RF15 |  |  |  |  | — |  |  |  | 
 | RF16 |  |  |  |  | — |  |  |  | 
 | RF17 |  |  |  |  | — |  |  |  | 
-| NF001 – Portabilidade e Compatibilidade |  |  | — |  |  | — |  | — | 
-| NF01 – Confiabilidade e Integridade |  |  | — |  |  | — |  | — | 
-| NF01 – Desempenho |  |  | — |  |  | — |  | — | 
-| NF04 – Segurança e Controle de Acesso |  |  | — |  |  | — |  | — | 
+| RNF01 – Portabilidade e Compatibilidade |  |  | — |  |  | — |  | — | 
+| RNF02 – Confiabilidade e Integridade |  |  | — |  |  | — |  | — | 
+| RNF03 – Desempenho |  |  | — |  |  | — |  | — | 
+| RNF04 – Segurança e Controle de Acesso |  |  | — |  |  | — |  | — | 
 
 O traço (—) indica que a regra não se aplica àquele tipo de requisito. A RV5 aplica-se exclusivamente aos requisitos não funcionais. A RV8 aplica-se aos requisitos funcionais que exigem autenticação.
 
