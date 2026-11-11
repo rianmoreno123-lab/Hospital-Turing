@@ -34,6 +34,7 @@ Hospital-Turing/
 │
 ├── .gitignore                    # Arquivo de exclusão de rastreamento do Git
 └── README.md                    
+```
 
 ### 2.2. Regras de Branches
 
