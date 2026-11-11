@@ -26,15 +26,14 @@ Considerando o estado atual do repositório, a estrutura de pastas e arquivos es
 
 ```
 Hospital-Turing/
-├── Documentos/                   # Documentação institucional e artefatos do projeto
+├── Documentos/                   
 │   ├── Documento de Requisitos.doc # Especificações funcionais e regras de negócio
 │   ├── Documento de Requisitos.pdf # Versão em PDF da documentação de requisitos
 │   ├── Prototipação.zip          # Arquivos compactados de prototipação
-│   └── Prototipo/                # Interfaces e wireframes do sistema
+│   └── Prototipo                
 │
 ├── .gitignore                    # Arquivo de exclusão de rastreamento do Git
-└── README.md                     # Documentação principal e descritiva do repositório
-```
+└── README.md                    
 
 ### 2.2. Regras de Branches
 
@@ -93,7 +92,7 @@ Com o propósito de garantir a legibilidade, a manutenibilidade e um alto padrã
 
 ### 3.1. Indentar corretamente o código
 
-O recuo de margem correto é indispensável para evidenciar a hierarquia e os limites de escopo em estruturas de controle e repetição (`if`, `else`, `while`, `for`). Blocos bem indentados simplificam a leitura e reduzem consideravelmente a incidência de falhas lógicas durante a manutenção evolutiva.
+O uso adequado de espaçamento e indentação é indispensável para evidenciar a hierarquia e os limites de escopo em estruturas de controle e repetição (`if`, `else`, `while`, `for`). Blocos bem indentados simplificam a leitura e reduzem consideravelmente a incidência de falhas lógicas durante a manutenção evolutiva.
 
 ### 3.2. Nomear variáveis de maneira intuitiva
 
@@ -160,7 +159,7 @@ Hospital-Turing/
 │   ├── Documento de Requisitos.doc
 │   ├── Documento de Requisitos.pdf
 │   ├── Prototipação.zip
-│   └── Prototipo/
+│   └── Prototipo
 │
 ├── .gitignore
 └── README.md
