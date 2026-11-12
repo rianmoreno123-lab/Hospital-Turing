@@ -94,3 +94,5 @@ Cada regra apresenta um critério mensurável, um procedimento de verificação 
 **✓:** o requisito cumpre integralmente o critério estabelecido.
 
 **—:** a regra não se aplica ao requisito.
+
+
