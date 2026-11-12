@@ -78,35 +78,33 @@ A tabela abaixo será utilizada para registrar os resultados da aplicação das 
 
 | Requisito | RV1 | RV2 | RV3 | RV4 | RV5 | RV6 | RV7 | RV8 | 
 | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | 
-| RF01 |  |  |  |  | — |  |  |  | 
-| RF02 |  |  |  |  | — |  |  |  | 
-| RF03 |  |  |  |  | — |  |  |  | 
-| RF04 |  |  |  |  | — |  |  |  | 
-| RF05 |  |  |  |  | — |  |  |  | 
-| RF06 |  |  |  |  | — |  |  |  | 
-| RF07 |  |  |  |  | — |  |  |  | 
-| RF08 |  |  |  |  | — |  |  |  | 
-| RF09 |  |  |  |  | — |  |  |  | 
-| RF10 |  |  |  |  | — |  |  |  | 
-| RF11 |  |  |  |  | — |  |  |  | 
-| RF12 |  |  |  |  | — |  |  |  | 
-| RF13 |  |  |  |  | — |  |  |  | 
-| RF14 |  |  |  |  | — |  |  |  | 
-| RF15 |  |  |  |  | — |  |  |  | 
-| RF16 |  |  |  |  | — |  |  |  | 
-| RF17 |  |  |  |  | — |  |  |  | 
-| RNF01 – Portabilidade e Compatibilidade |  |  | — |  |  | — |  | — | 
-| RNF02 – Confiabilidade e Integridade |  |  | — |  |  | — |  | — | 
-| RNF03 – Desempenho |  |  | — |  |  | — |  | — | 
-| RNF04 – Segurança e Controle de Acesso |  |  | — |  |  | — |  | — | 
+| RF01 | ✓ | ✓ | ✓ | ✓ | — | ✓ | ✓ | ✓ | 
+| RF02 | ✓ | ✓ | ✓ | ✓ | — | ✓ | ✓ | ✓ | 
+| RF03 | ✓ | ✓ | ✓ | ✓ | — | ✓ | ✓ | ✓ | 
+| RF04 | ✓ | ✓ | ✓ | ✓ | — | ✓ | ✓ | ✓ | 
+| RF05 | ✓ | ✓ | ✓ | ✓ | — | ✓ | ✓ | ✓ | 
+| RF06 | ✓ | ✓ | ✓ | ✓ | — | ✓ | ✓ | ✓ | 
+| RF07 | ✓ | ✓ | ✓ | ✓ | — | ✓ | ✓ | ✓ | 
+| RF08 | ✓ | ✓ | ✓ | ✓ | — | ✓ | ✓ | ✓ | 
+| RF09 | ✓ | ✓ | ✓ | ✓ | — | ✓ | ✓ | ✓ | 
+| RF10 | ✓ | ✓ | ✓ | ✓ | — | ✓ | ✓ | ✓ | 
+| RF11 | ✓ | ✓ | ✓ | ✓ | — | ✓ | ✓ | ✓ | 
+| RF12 | ✓ | ✓ | ✓ | ✓ | — | ✓ | ✓ | ✓ | 
+| RF13 | ✓ | ✓ | ✓ | ✓ | — | ✓ | ✓ | ✓ | 
+| RF14 | ✓ | ✓ | ✓ | ✓ | — | ✓ | ✓ | ✓ | 
+| RF15 | ✓ | ✓ | ✓ | ✓ | — | ✓ | ✓ | ✓ | 
+| RF16 | ✓ | ✓ | ✓ | ✓ | — | ✓ | ✓ | ✓ | 
+| RF17 | ✓ | ✓ | ✓ | ✓ | — | ✓ | ✓ | ✓ | 
+| RNF01 – Portabilidade e Compatibilidade | ✓ | ✓ | — | ✓ | ✓ | — | ✓ | — | 
+| RNF02 – Confiabilidade e Integridade | ✓ | ✓ | — | ✓ | ✓ | — | ✓ | — | 
+| RNF03 – Desempenho | ✓ | ✓ | — | ✓ | ✓ | — | ✓ | — | 
+| RNF04 – Segurança e Controle de Acesso | ✓ | ✓ | — | ✓ | ✓ | — | ✓ | — | 
 
-O traço (—) indica que a regra não se aplica àquele tipo de requisito. A RV5 aplica-se exclusivamente aos requisitos não funcionais. A RV8 aplica-se aos requisitos funcionais que exigem autenticação.
+A RV5 aplica-se exclusivamente aos requisitos não funcionais. A RV8 aplica-se aos requisitos funcionais que exigem autenticação.
 
 Legenda
 
-- **Atende:** o requisito cumpre integralmente o critério estabelecido.
-
-- **Não atende:** o requisito apresenta alguma inconsistência em relação ao critério.
+- **✓:** o requisito cumpre integralmente o critério estabelecido.
 
 - **—:** a regra não se aplica ao requisito.
 
