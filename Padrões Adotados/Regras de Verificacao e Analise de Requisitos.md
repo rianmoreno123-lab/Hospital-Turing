@@ -8,23 +8,15 @@ Versão: 1.0 – Novembro de 2026
 
 Equipe: Davi Fayer Gonçalves, João Vitor da Silva Rodrigues e Rian Moreno Maciel.
 
----
+
 
 ## 1. Objetivo e fonte
 
-Este documento estabelece os critérios utilizados para verificar a qualidade e a consistência do Documento de Requisitos do sistema Hospital-Turing.
-
-As regras apresentadas permitem avaliar se os Requisitos Funcionais (RF), Requisitos Não Funcionais (RNF) e Regras de Negócio (RN) estão descritos de maneira clara, organizada, verificável e coerente com as funcionalidades propostas para o sistema.
-
-Cada regra possui um critério mensurável e um procedimento de verificação, permitindo que diferentes integrantes da equipe realizem a análise e obtenham resultados consistentes.
+Este documento estabelece os critérios utilizados para verificar a qualidade e a consistência do Documento de Requisitos do sistema Hospital-Turing. As regras apresentadas permitem avaliar se os Requisitos Funcionais (RF) e Requisitos Não Funcionais (RNF) estão descritos de maneira clara, organizada, verificável e coerente com as funcionalidades propostas para o sistema. Cada regra possui um critério mensurável e um procedimento de verificação, permitindo que diferentes integrantes da equipe realizem a análise e obtenham resultados consistentes. As regras de verificação RV1 a RV7 foram fundamentadas nas orientações do Capítulo 1, principalmente nas seções 5.1, 7.2 e 7.3. A regra RV8 considera as diretrizes de elaboração do projeto prático da disciplina. Os números de página apresentados nas regras correspondem à numeração impressa do capítulo.
 
 Livro de referência: MAGELA, Rogério. Engenharia de Software Aplicada: Fundamentos. Alta Books.
 
-As regras RV1 a RV7 foram fundamentadas nas orientações do Capítulo 1, principalmente nas seções 5.1, 7.2 e 7.3. A regra RV8 considera as diretrizes de elaboração do projeto prático da disciplina.
 
-Os números de página apresentados nas regras correspondem à numeração impressa do capítulo.
-
----
 
 ## 2. Nomenclatura adotada
 
@@ -32,15 +24,13 @@ Os números de página apresentados nas regras correspondem à numeração impre
 
 - **RNF:** Requisito Não Funcional, identificado pela sigla correspondente, seguida de numeração sequencial.
 
-- **RN:** Regra de Negócio associada a um caso de uso específico, identificada por numeração sequencial simples (1, 2, 3...).
-
 - **Interfaces:** Prefixo "I_" para interfaces gerais de tela, "IE_" para interfaces que apresentam mensagens de erro e "IS_" para interfaces que apresentam mensagens de sucesso. Os prefixos são seguidos pelo nome da interface em PascalCase, sem espaços.
 
 - **Prioridade:** Cada requisito deve possuir exatamente uma classificação entre Essencial, Importante e Desejável, conforme os níveis definidos no atributo Benefício do livro de referência.
 
 Observação: A identificação dos requisitos não funcionais deverá seguir um padrão único, evitando variações e duplicidades entre as categorias.
 
----
+
 
 ## 3. Regras de verificação
 
@@ -57,25 +47,23 @@ Cada regra apresenta um critério mensurável, um procedimento de verificação 
 | **RV7** | **Prioridade definida** | Todo RF e RNF deve possuir exatamente uma prioridade selecionada entre Essencial, Importante e Desejável. | Conferir as marcações de prioridade nas tabelas de requisitos funcionais e não funcionais (esperado: exatamente 1 prioridade por requisito). | Cap. 1, seção 5.1 (Benefício), p. 11. | 
 | **RV8** | **Pré-condição com login e tela** | Todo RF que exige autenticação deve informar, na pré-condição, que o usuário precisa estar autenticado e identificar a tela inicial correspondente ao seu perfil, conforme as interfaces documentadas. | Conferir as pré-condições de cada RF e comparar os nomes das telas com as interfaces existentes no protótipo (esperado: 100% de conformidade nos requisitos que exigem autenticação). | Diretriz de alinhamento prático de Engenharia de Software (tarefa da disciplina). | 
 
----
+
 
 ## 4. Como aplicar
 
 1. **Divisão de responsabilidades:** Cada integrante realizará a verificação dos requisitos sob sua responsabilidade, considerando a divisão de atividades estabelecida pela equipe.
 
-2. **Matriz de avaliação:** Para cada requisito e regra aplicável, será registrada a classificação "Atende" ou "Não atende" na tabela de avaliação.
+2. **Matriz de avaliação:** Para cada requisito e regra aplicável, será registrada a classificação "✓" (atende ao requisito) ou "—" (não atende ao requisito) na tabela de avaliação.
 
-3. **Correção e re-verificação:** Os requisitos identificados como "Não atende" deverão ser corrigidos no Documento de Requisitos, sendo submetidos novamente aos critérios de verificação.
+3. **Correção e re-verificação:** Os requisitos identificados como "—" deverão ser corrigidos no Documento de Requisitos, sendo submetidos novamente aos critérios de verificação.
 
-4. **Revisão cruzada:** Conforme recomendado por Magela (seção 7.3, p. 19), a análise final de consistência deverá ser realizada por um integrante diferente daquele que elaborou o requisito avaliado.
+4. **Revisão cruzada:** Conforme recomendado no livro de referência (seção 7.3, p. 19), a análise final de consistência deverá ser realizada por um integrante diferente daquele que elaborou o requisito avaliado.
 
 5. **Manutenção da documentação:** Sempre que forem realizadas alterações ou inclusões no Documento de Requisitos, as regras de verificação deverão ser aplicadas novamente aos itens modificados.
 
----
+
 
 ## 5. Tabela de avaliação
-
-A tabela abaixo será utilizada para registrar os resultados da aplicação das regras de verificação aos requisitos do Hospital-Turing.
 
 | Requisito | RV1 | RV2 | RV3 | RV4 | RV5 | RV6 | RV7 | RV8 | 
 | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | 
@@ -101,12 +89,8 @@ A tabela abaixo será utilizada para registrar os resultados da aplicação das 
 | RNF03 – Desempenho | ✓ | ✓ | — | ✓ | ✓ | — | ✓ | — | 
 | RNF04 – Segurança e Controle de Acesso | ✓ | ✓ | — | ✓ | ✓ | — | ✓ | — | 
 
-A RV5 aplica-se exclusivamente aos requisitos não funcionais. A RV8 aplica-se aos requisitos funcionais que exigem autenticação.
+**Legenda**
 
-Legenda
+**✓:** o requisito cumpre integralmente o critério estabelecido.
 
-- **✓:** o requisito cumpre integralmente o critério estabelecido.
-
-- **—:** a regra não se aplica ao requisito.
-
-A avaliação deverá ser preenchida após a análise de cada requisito pela equipe.
+**—:** a regra não se aplica ao requisito.
