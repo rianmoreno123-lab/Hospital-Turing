@@ -2,7 +2,7 @@
 
 **GCC 188 – Engenharia de Software**
 
-Projeto: Hospital-Turing
+Projeto: Hospital Turing
 Versão: 1.0 – Novembro de 2026
 
 Equipe: Davi Fayer Gonçalves, João Vitor da Silva Rodrigues e Rian Moreno Maciel.
