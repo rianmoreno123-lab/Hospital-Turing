@@ -174,8 +174,18 @@ Hospital-Turing/
 │   ├── Prototipação.zip
 │   └── Prototipo
 │
+├── Padrões Adotados
+│   └── Regras de Verificacao e Analise de Requisitos.md
+│
+├── backend/
+│   ├── database.py
+│   ├── main.py
+│   └── models.py
+│
+├── .env.example
 ├── .gitignore
-└── README.md
+├── README.md
+└── requirements.txt
 ```
 
 ### Descrição dos Diretórios e Arquivos Principais
