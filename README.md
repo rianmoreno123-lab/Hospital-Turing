@@ -23,7 +23,7 @@ O **Hospital-Turing** é um sistema web para gerenciamento hospitalar que permit
 Para executar o projeto localmente, certifique-se de instalar os programas abaixo (conforme as versões especificadas na seção de Tecnologias):
 
 * **Git**: v2.50.1
-* **Python**: v3.15.2 – na instalação, marque a opção **"Add python.exe to PATH"**.
+* **Python**: v3.15.2 - na instalação, marque a opção **"Add python.exe to PATH"**.
 * **MySQL Server**: v8.0.44
 * **VS Code**: v1.146.0 (ou outro editor de código de sua preferência)
 * **Cliente MySQL**: MySQL Workbench ou DBeaver
