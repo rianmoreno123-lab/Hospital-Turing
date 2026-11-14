@@ -1,7 +1,20 @@
-# Ignorar dados sensíveis
+# Variáveis de ambiente (Segurança)
 .env
 
-# Ignorar pastas de ambiente virtual e cache do Python
+# Ambiente virtual Python
 venv/
+env/
+ENV/
+
+# Cache do Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# Configurações locais de IDEs (Opcional, caso prefira não versionar o VS Code)
+.vscode/
+
+# Arquivos de sistema operacional
+.DS_Store
+Thumbs.db
