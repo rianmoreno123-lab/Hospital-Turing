@@ -39,9 +39,14 @@ cd Hospital-Turing
 O ambiente virtual isola as dependências do projeto na sua máquina.
 
 * **No Windows (PowerShell):**
+
+  
   ```bash
   python -m venv venv
   venv\Scripts\Activate
+  ```
+  ```bash
+  Se der erro de permissão, rode primeiro: Set-ExecutionPolicy Bypass -Scope Process
   ```
 
 * **No Mac / Linux:**
