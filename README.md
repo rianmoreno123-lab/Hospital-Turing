@@ -20,7 +20,71 @@ O **Hospital-Turing** é um sistema web para gerenciamento hospitalar que permit
 
 ## 2. Instruções para Uso 
 
+Para executar o projeto localmente, certifique-se de instalar os programas abaixo (conforme as versões especificadas na seção de Tecnologias):
 
+* **Git**: v2.50.1
+* **Python**: v3.15.2 – na instalação, marque a opção **"Add python.exe to PATH"**.
+* **MySQL Server**: v8.0.44
+* **VS Code**: v1.146.0 (ou outro editor de código de sua preferência)
+* **Cliente MySQL**: MySQL Workbench ou DBeaver
+
+### 2.1. Clonar o Repositório
+Abra o seu terminal e clone o projeto para a sua máquina:
+```bash
+git clone https://github.com/rianmoreno123-lab/Hospital-Turing.git
+cd Hospital-Turing
+```
+
+### 2.2. Criar e Ativar o Ambiente Virtual
+O ambiente virtual isola as dependências do projeto na sua máquina.
+
+* **No Windows (PowerShell):**
+  ```bash
+  python -m venv venv
+  venv\Scripts\Activate
+  ```
+
+* **No Mac / Linux:**
+  ```bash
+  python3 -m venv venv
+  source venv/bin/activate
+  ```
+
+### 2.3. Instalar as Dependências
+Com o ambiente virtual ativado, instale os pacotes necessários:
+```bash
+pip install -r requirements.txt
+```
+
+### 2.4. Configurar as Variáveis de Ambiente
+1. Na raiz do projeto, localize o arquivo `.env.example`.
+2. Faça uma cópia dele e renomeie o novo arquivo para `.env`.
+3. Abra o arquivo `.env` e preencha com a sua senha real do MySQL.
+
+### 2.5. Criar o Banco de Dados e a Tabela no MySQL
+Abra o seu gerenciador de MySQL (como o Workbench ou DBeaver) e execute o script SQL abaixo para criar a estrutura que o projeto utiliza:
+
+```sql
+CREATE DATABASE hospital_turing;
+
+USE hospital_turing;
+
+CREATE TABLE Paciente (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    idade INT NOT NULL,
+    sintomas TEXT
+);
+```
+
+### 2.6. Executar a Aplicação
+Com tudo configurado, inicie o servidor com o Uvicorn:
+```bash
+python -m uvicorn main:app --reload
+```
+
+Assim que o servidor estiver rodando, acesse a documentação interativa no seu navegador:
+* `http://127.0.0.1:8000/docs`
 
 ## 3. Instruções para Devs (Boas Práticas de Codificação)
 
@@ -76,7 +140,12 @@ limiteDiariasEnfermaria = 30
 
 | Tecnologia | Versão | Finalidade | 
 | ----- | ----- | ----- | 
-| **Python** | 3.15.2 | Linguagem principal para a lógica de negócio do backend. | 
+| **Python** | v3.15.2 | Linguagem principal para a lógica de negócio do backend. | 
+| **FastAPI** | v0.163.0 | Framework web moderno e de alta performance para construção da API RESTful. | 
+| **Uvicorn** | v0.54.0 | Servidor ASGI para execução da aplicação FastAPI. | 
+| **Pydantic** | v2.14.3 | Validação de dados e tipagem utilizando anotações do Python. | 
+| **mysql-connector-python** | v26.10.0 | Driver oficial de conexão com o banco de dados MySQL. | 
+| **python-dotenv** | v1.2.4 | Gerenciamento seguro de variáveis de ambiente a partir do arquivo `.env`. | 
 
 ### Banco de Dados
 
