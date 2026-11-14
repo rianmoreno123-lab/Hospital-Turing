@@ -70,10 +70,12 @@ CREATE DATABASE hospital_turing;
 USE hospital_turing;
 
 CREATE TABLE Paciente (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    codigo INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
-    idade INT NOT NULL,
-    sintomas TEXT
+    cpf VARCHAR(11) NOT NULL UNIQUE,
+    dataNascimento DATE NOT NULL,
+    telefone VARCHAR(15),
+    endereco VARCHAR(200)
 );
 ```
 
