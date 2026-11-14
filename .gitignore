@@ -1,0 +1,7 @@
+# Ignorar dados sensíveis
+.env
+
+# Ignorar pastas de ambiente virtual e cache do Python
+venv/
+__pycache__/
+*.pyc
