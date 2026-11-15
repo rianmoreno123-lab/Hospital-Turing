@@ -45,8 +45,9 @@ O ambiente virtual isola as dependências do projeto na sua máquina.
   python -m venv venv
   venv\Scripts\Activate
   ```
+  Se der erro de permissão, rode primeiro:
   ```bash
-  Se der erro de permissão, rode primeiro: Set-ExecutionPolicy Bypass -Scope Process
+  Set-ExecutionPolicy Bypass -Scope Process
   ```
 
 * **No Mac / Linux:**
