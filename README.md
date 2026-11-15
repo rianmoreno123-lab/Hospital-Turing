@@ -94,20 +94,11 @@ python -m uvicorn main:app --reload
 Assim que o servidor estiver rodando, acesse a documentação interativa no seu navegador:
 * `http://127.0.0.1:8000/docs`
 
-## 3. Instruções para Devs (Boas Práticas de Codificação)
+## 3. Regras a serem seguidas durante a programação
 
 Com o propósito de garantir a legibilidade, a manutenibilidade e um alto padrão técnico na base de código, a equipe deve observar estritamente as diretrizes abaixo:
 
-### 3.1. Indentar corretamente o código
-
-O uso adequado de espaçamento e indentação é indispensável para evidenciar a hierarquia e os limites de escopo em estruturas de controle e repetição (`if`, `else`, `while`, `for`). Blocos bem indentados simplificam a leitura e reduzem consideravelmente a incidência de falhas lógicas durante a manutenção evolutiva.
-
-### 3.2. Nomear variáveis e funções de maneira intuitiva
-
-Os identificadores de variáveis devem descrever com precisão o tipo de dado e a função que exercem na regra de negócio. O grupo deve evitar denominações vagas, genéricas ou arbitrárias (como `x`, `y` ou `temp`) quando estas não refletirem com clareza o conteúdo armazenado.
-As funções deverão ter nomes que indiquem claramente a ação realizada (ex: `cadastrarPaciente()`, `calcularRemuneracaoMedica()`, `validarAtendimento()`). Funções que retornam valores booleanos também deverão ter nomes claros, indicando uma verificação (ex: `pacienteAtivo()`, `cirurgiaConcluida()`).
-
-### 3.3. Padrão de Commits
+### 3.1. Padrão de Commits
 
 As mensagens de commit devem seguir um padrão semântico, inspirado no modelo de commits convencionais. Esse padrão facilita a leitura do histórico e ajuda a entender rapidamente o tipo de alteração realizada.
 
@@ -124,7 +115,49 @@ Exemplos:
 
 * `delete: função com lógica errada`
 
-### 3.4. Padronizar nomes de constantes (`camelCase`)
+### 3.2. Regras de Branches
+
+Para evitar conflitos e facilitar o desenvolvimento em equipe, o projeto utilizará branches com finalidades específicas.
+
+**Branch principal**
+
+```
+main
+```
+
+A branch `main` deve conter apenas versões estáveis do projeto. Nenhuma alteração deve ser enviada diretamente para ela sem revisão.
+
+**Branch de desenvolvimento**
+
+```
+develop
+```
+
+A branch `develop` será usada para integrar as funcionalidades em desenvolvimento antes de enviá-las para a branch principal.
+O fluxo de trabalho do grupo será:
+
+* Criar ou escolher uma issue relacionada à tarefa que será feita.
+
+* Atualizar a branch `develop` antes de começar a alteração.
+
+* Desenvolver a funcionalidade, correção ou documentação necessária.
+
+* Realizar commits pequenos e objetivos, seguindo o padrão definido.
+
+* Enviar as alterações para a branch `develop`.
+
+* Quando a versão estiver funcionando, integrar a branch `develop` na branch `main` via Pull Request.
+
+### 3.3. Indentar corretamente o código
+
+O uso adequado de espaçamento e indentação é indispensável para evidenciar a hierarquia e os limites de escopo em estruturas de controle e repetição (`if`, `else`, `while`, `for`). Blocos bem indentados simplificam a leitura e reduzem consideravelmente a incidência de falhas lógicas durante a manutenção evolutiva.
+
+### 3.4. Nomear variáveis e funções de maneira intuitiva
+
+Os identificadores de variáveis devem descrever com precisão o tipo de dado e a função que exercem na regra de negócio. O grupo deve evitar denominações vagas, genéricas ou arbitrárias (como `x`, `y` ou `temp`) quando estas não refletirem com clareza o conteúdo armazenado.
+As funções deverão ter nomes que indiquem claramente a ação realizada (ex: `cadastrarPaciente()`, `calcularRemuneracaoMedica()`, `validarAtendimento()`). Funções que retornam valores booleanos também deverão ter nomes claros, indicando uma verificação (ex: `pacienteAtivo()`, `cirurgiaConcluida()`).
+
+### 3.5. Padronizar nomes de constantes (`camelCase`)
 
 Conforme a diretriz do projeto, as constantes deverão seguir o formato **camelCase** (letras minúsculas nas iniciais e letras maiúsculas nas palavras compostas subsequentes, sem o uso de caracteres separadores como underlines ou hífens).
 
@@ -135,6 +168,18 @@ statusAtendimentoAtivo = "ativo"
 valorBaseCirurgiaAlta = 1500.00
 limiteDiariasEnfermaria = 30
 ```
+
+### 3.6. Comentar e documentar o código quando necessário
+
+O código deverá conter comentários em trechos importantes, principalmente quando houver regras de negócio, validações ou lógicas mais complexas. Comentários não devem ser usados para explicar comandos óbvios, mas sim para esclarecer a intenção de uma regra ou funcionamento.
+
+### 3.7. Funções e Componentes de Responsabilidade Única
+
+Cada função, rota ou componente de interface deve executar estritamente uma única tarefa clara e bem definida. O código produzido deve ser simples, limpo e direto, o que facilita consideravelmente a explicabilidade técnica detalhada passo a passo e a manutenção evolutiva.
+
+### 3.8. Redução de Aninhamento Excessivo 
+
+A estrutura lógica de blocos condicionais (`if`, `else`, `for`) deve ser mantida o mais linear e plana possível, evitando aninhamentos profundos. O grupo deve priorizar o uso de cláusulas de guarda para tratar exceções ou validações iniciais logo no topo da função, facilitando a leitura sequencial do fluxo principal de negócio.
 
 ## 4. Tecnologias
 
@@ -198,11 +243,19 @@ Hospital-Turing/
 
 ### Descrição dos Diretórios e Arquivos Principais
 
-* **`Documentos/`**: Armazena os artefatos de requisitos, especificações detalhadas do sistema e arquivos de prototipação da interface.
+- **`Documentos/`**: Armazena os artefatos de requisitos, especificações detalhadas do sistema e arquivos de prototipação da interface.
 
-* **`.gitignore`**: Configuração de arquivos ignorados pelo versionamento Git.
+- **`Padrões Adotados/`**: Diretório que consolida as diretrizes, convenções de código, arquitetura e regras metodológicas estabelecidas para o desenvolvimento do projeto, incluindo o arquivo `Regras de Verificacao e Analise de Requisitos.md`.
 
-* **`README.md`**: Documentação descritiva de apresentação do repositório.
+- **`backend/`**: Diretório central do código-fonte do servidor, dividido modularmente entre o gerenciamento de conexão com o MySQL (`database.py`), a validação e tipagem estrita com Pydantic (`models.py`) e as rotas do CRUD em FastAPI (`main.py`).
+
+- **`.env.example`**: Arquivo de modelo que ilustra as variáveis de ambiente necessárias para configurar e executar a aplicação localmente.
+
+- **`.gitignore`**: Configuração de arquivos e diretórios ignorados pelo versionamento Git.
+
+- **`README.md`**: Documentação descritiva de apresentação e guia inicial do repositório.
+
+- **`requirements.txt`**: Lista de dependências e bibliotecas Python necessárias para a instalação e execução do *backend*.
 
 ## 6. Equipe
 
