@@ -46,7 +46,7 @@ def cadastrarPaciente(paciente: PacienteSchema):
         cursor.close()
         conexao.close()
 
-@app.get("/pacientes", response_model=List[PacienteResponse])
+@app.get("/pacientes", response_model=list[PacienteResponse])
 def listarPacientes():
     conexao = conectarBanco()
     cursor = conexao.cursor(dictionary=True)
