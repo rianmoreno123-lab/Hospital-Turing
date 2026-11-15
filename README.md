@@ -38,7 +38,7 @@ cd Hospital-Turing
 ### 2.2. Criar e Ativar o Ambiente Virtual
 O ambiente virtual isola as dependências do projeto na sua máquina.
 
-* **No Windows (PowerShell):**
+* **No Windows:**
 
   
   ```bash

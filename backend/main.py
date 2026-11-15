@@ -1,9 +1,8 @@
-from typing import List
+from fastapi import FastAPI, HTTPException, status 
+from fastapi.middleware.cors import CORSMiddleware
 import mysql.connector
-from fastapi import FastAPI, HTTPException, status
 from backend.database import conectarBanco
 from backend.models import PacienteSchema, PacienteResponse
-from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="Hospital-Turing - CRUD Paciente", version="1.0")
 
