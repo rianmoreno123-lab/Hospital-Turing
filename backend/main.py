@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, status 
+from fastapi import FastAPI, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 import mysql.connector
 from backend.database import conectarBanco
