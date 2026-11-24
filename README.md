@@ -90,9 +90,16 @@ Com tudo configurado, inicie o servidor com o Uvicorn:
 ```bash
 python -m uvicorn main:app --reload
 ```
+Caso já esteja usando essa porta, tente:
+```bash
+python -m uvicorn backend.main:app --reload --port 8001
+```
+Ou algum outro valor.
 
 Assim que o servidor estiver rodando, acesse a documentação interativa no seu navegador:
 * `http://127.0.0.1:8000/docs`
+
+Lembre-se de usar a porta correta.
 
 ## 3. Regras a serem seguidas durante a programação
 
