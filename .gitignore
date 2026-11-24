@@ -1,4 +1,4 @@
-# Variáveis de ambiente (Segurança)
+# Variáveis de ambiente 
 .env
 
 # Ambiente virtual Python
@@ -12,7 +12,6 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Configurações locais de IDEs (Opcional, caso prefira não versionar o VS Code)
 .vscode/
 
 # Arquivos de sistema operacional
