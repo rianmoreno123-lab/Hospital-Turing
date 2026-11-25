@@ -71,11 +71,10 @@ pip install -r requirements.txt
 Abra o seu gerenciador de MySQL (como o Workbench ou DBeaver) e execute o script SQL abaixo para criar a estrutura que o projeto utiliza:
 
 ```sql
-CREATE DATABASE hospital_turing;
-
+CREATE DATABASE IF NOT EXISTS hospital_turing;
 USE hospital_turing;
 
-CREATE TABLE Paciente (
+CREATE TABLE IF NOT EXISTS Paciente (
     codigo INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     cpf VARCHAR(11) NOT NULL UNIQUE,
@@ -83,6 +82,19 @@ CREATE TABLE Paciente (
     telefone VARCHAR(15),
     endereco VARCHAR(200)
 );
+
+CREATE TABLE IF NOT EXISTS Usuario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL,
+    cargo VARCHAR(50) NOT NULL
+);
+
+INSERT INTO Usuario (nome, email, senha, cargo)
+VALUES ('Renata Alves', 'admin@hospital.com', '123456', 'administrador');
+
+
 ```
 
 ### 2.6. Executar a Aplicação
