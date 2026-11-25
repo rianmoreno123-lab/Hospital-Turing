@@ -14,3 +14,8 @@ class PacienteResponse(PacienteSchema):
 
     class Config:
         from_attributes = True
+
+class LoginSchema(BaseModel):
+    email: str
+    senha: str
+    cargo: str

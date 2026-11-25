@@ -14,6 +14,7 @@ app.add_middleware(
     allow_headers=["*"], 
 )
 
+
 @app.post("/pacientes", response_model=PacienteResponse, status_code=status.HTTP_201_CREATED)
 def cadastrarPaciente(paciente: PacienteSchema):
     conexao = conectarBanco()
@@ -118,6 +119,46 @@ def excluirPaciente(codigoPaciente: int):
         cursor.execute("DELETE FROM Paciente WHERE codigo = %s", (codigoPaciente,))
         conexao.commit()
         return None
+    finally:
+        cursor.close()
+        conexao.close()
+
+@app.get("/usuarios/{email}")
+def buscarUsuarioPorEmail(email: str):
+    conexao = conectarBanco()
+    cursor = conexao.cursor(dictionary=True)
+    try:
+       
+        sql = "SELECT nome, cargo FROM Usuario WHERE email = %s"
+        cursor.execute(sql, (email,))
+        resultado = cursor.fetchone()
+        
+        if not resultado:
+            raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+        return resultado
+    finally:
+        cursor.close()
+        conexao.close()
+
+from backend.models import PacienteSchema, PacienteResponse, LoginSchema
+
+@app.post("/login")
+def login(dados: LoginSchema):
+    conexao = conectarBanco()
+    cursor = conexao.cursor(dictionary=True)
+    try:
+        cursor.execute(
+            "SELECT nome, cargo FROM Usuario WHERE email = %s AND senha = %s",
+            (dados.email, dados.senha),
+        )
+        usuario = cursor.fetchone()
+        if not usuario:
+            raise HTTPException(status_code=401, detail="E-mail ou senha incorretos.")
+        if usuario["cargo"] != dados.cargo:
+            raise HTTPException(status_code=403, detail="Este usuário não tem acesso a esse perfil.")
+        return usuario
+    except mysql.connector.Error as erro:
+        raise HTTPException(status_code=500, detail=f"Erro no banco: {erro}")
     finally:
         cursor.close()
         conexao.close()
